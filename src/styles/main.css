@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.skip-content {
+    position: absolute;
+    top:-60px;
+    left: 0;
+    background-color: #1b1717;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    min-width: 44px;
+    line-height: 44px;
+    min-height: 44px;
+    display: block;
+}
+
+.skip-content:focus {
+    top: 0;
+    line-height: 44px;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    outline-color: #810000;
+}
+
+li a {
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
+}
+
+li a:focus {
+    outline-color: #810000;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+small {
+    font-weight: 300;
+    font-size: 0.6em;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 3%;
+    box-shadow: 0 2px 12px 0 rgb(36 50 66 / 8%);
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+.header__menu {
+    font-size: 24px;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.nav {
+    background-color: #ffffff;
+    color : #1b1717;
+}
+
+.nav__list {
+    list-style-type: none;
+    font-size: 1.4em;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color : black;
+    cursor: pointer;
+}
+
+.nav__list a:hover {
+    color: #393e46;
+}
+
+.nav__list li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.hero {
+    background: url("hero-image.jpg") rgba(0, 0, 0, 0.6);
+    width: 100%;
+    min-height: 90%;
+    background-size:cover;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 3em;
+    color: #eeebdd;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    padding: 50px;
+}
+
+.explore {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.list-restaurant {
+    margin: 48px auto auto;    
+}
+
+.restaurant-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.restaurant-item__content {
+    padding: 24px;
+}
+
+.restaurant-item__thumbnail {
+    width: 100%;
+    height: 200px;
+}
+
+.restaurant-item__location {
+    margin-top: 20px;
+    width: 90px;
+    height: 60px;
+    position: absolute;
+    background-color: #1b1717;
+    color: #eeebdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-item__location {
+    font-size: 1.2em;
+}
+
+.restaurant-item__rating {
+    font-size: 1.4em;
+}
+
+.restaurant-item__name {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    line-height: 44px;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.restaurant-item__name:focus {
+    display: inline-block;
+    line-height: 44px;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    outline-color: #810000;
+}
+
+.restaurant-item__description {
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+footer {
+    text-align: center;
+    background-color: #1b1717;
+    color: white;
+    padding: 20px;    
+    font-size: 1.2em;
+}
+
+@media screen and (min-width:320px) {
+    
+    .list-restaurant {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 48px;
+        row-gap: 32px;
+    }
+
+    .hero__title {
+        font-size: 2.5em;
+    }
+
+    .restaurant-item__content {
+        padding: 8px 16px 24px 16px;
+    }
+
+    .restaurant-item__rating, .restaurant-item__name {
+        font-size: 1.2em;
+    }
+
+    .restaurant-item__description {
+        font-size: 1em;
+    }
+
+    .nav {
+        transform: translate(-400px,312px);
+    }
+
+    .nav.open {
+        transform: translate(-150px,312px);
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .nav {
+        transform: translate(-500px,312px);
+    }
+
+    .nav.open {
+        transform: translate(-195px,312px);
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .nav {
+        transform: translate(-500px,312px);
+    }
+
+    .nav.open {
+        transform: translate(-240px,312px);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .nav {
+        width: 170px;
+        height: 100%;
+        position: absolute;
+        list-style-type: none;
+        padding: 20px 16px;
+        transition: transform 0.3s ease-in-out;
+        background-color: #1b1717;
+        text-decoration: none;
+        font-size: 1.4em;
+    }
+    
+    .nav a:hover {
+        color: #393e46;
+    }
+    
+    .nav ul {
+        list-style-type: none;
+        padding: 0 16px;
+    }
+    
+    .nav li {
+        padding: 5px;
+    }
+    
+    .nav a {
+        text-decoration: none;
+        font-size: 0.8em;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .header__menu {
+        display: none;
+    }
+
+    .drawer {
+        display: none;
+    }
+    .nav {
+        display: inline-block;
+    }
+    
+    .hero__title {
+        font-size: 3em;
+    }
+
+    .nav {
+        transform: translate(-400px,325px);
+    }
+
+    .nav.open {
+        transform: translate(-140px,325px);
+    }
+}
+
+@media screen and (min-width:700px) {
+    .nav {
+        transform: translate(0,0);
+    }
+
+    .list-restaurant {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .restaurant-item__rating, .restaurant-item__name {
+        font-size: 1.4em;
+    }
+
+    .restaurant-item__description {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width:900px) {
+
+    .list-restaurant {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .restaurant-item__description {
+        font-size: 1.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
